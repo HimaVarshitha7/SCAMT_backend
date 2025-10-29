@@ -19,7 +19,8 @@ app.use(cors({
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
-connectDB();
+connectDB().then(() => console.log("MongoDB Connected (Atlas)"));
+
 
 app.use('/api/auth', authRoutes);
 app.use('/api/complaints', complaintRoutes);
