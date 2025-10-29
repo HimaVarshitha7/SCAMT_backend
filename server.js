@@ -9,7 +9,10 @@ const serviceRoutes = require('./routes/services');
 const mongoose = require('mongoose');
 
 const app = express();
-
+const port = process.env.PORT || 5173
+app.listen(port,()=>{
+  console.log(`Post is successfully listening on ${port}`)
+})
 app.use(cors({
   origin: [
     "http://localhost:5173", 
