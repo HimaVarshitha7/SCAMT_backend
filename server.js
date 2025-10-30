@@ -15,8 +15,7 @@ app.listen(port,()=>{
 })
 app.use(cors({
   origin: [
-    "http://localhost:5173", 
-    "https://scamt-frontend.vercel.app/",
+    "http://localhost:5173",
     "https://scamt-frontend.onrender.com" 
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
